@@ -150,14 +150,29 @@
                 font-size: x-large;
             }
         }
+        #bg-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+    object-fit: cover;
+    object-position: center top 50%;    /* Đẩy video lên một chút */
+    opacity: 0.9; /* bạn có thể chỉnh độ mờ */
+}
+
     </style>
 </head>
 
 <body id="playbtn" onclick="audio">
-    <audio id="audio" src="hihi.mp3"></audio>
-    <video id="bg-video " autoplay loop muted>
+
+    <video autoplay loop muted playsinline id="bg-video">
         <source src="phaohoa.mp4" type="video/mp4">
-        Your browser does not support the video tag.
+        Trình duyệt của bạn không hỗ trợ video.
+    </video>
+
+    <audio id="audio" src="hihi.mp3"></audio>
     <div class="container">
         <img class="avatar" src="Hiếu.jpg" alt="Avatar">
         <h3>Mai Ngọc Hiếu</h3>
